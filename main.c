@@ -44,7 +44,7 @@
 
 #define PACKET_LEN 64
 
-#define SYNCHRO_MODE 0
+#define SYNCHRO_MODE 1
 
 
   #define NONE_P  GPIO_WriteHigh(GPIOB, (GPIO_Pin_TypeDef)GPIO_PIN_5); Delay_ms(1); GPIO_WriteLow(GPIOB, (GPIO_Pin_TypeDef)GPIO_PIN_5)
@@ -141,6 +141,14 @@ void main(void)
   
 	/* Enable the SPI*/
   SPI_Cmd(ENABLE);
+
+  
+  // RESET SI4463
+  GPIO_WriteHigh(GPIOD, (GPIO_Pin_TypeDef)GPIO_PIN_4);                    // SDN Hight
+  Delay_ms(10);
+  GPIO_WriteLow(GPIOD, (GPIO_Pin_TypeDef)GPIO_PIN_4);                     // SDN Low
+  Delay_ms(100);
+
   
   if(1){                                                                        // Test to Read Device Name
   unsigned char buffer[16];
@@ -157,12 +165,7 @@ void main(void)
   }
   Printf("Device is SI4463\n\r");
   
-  // RESET SI4463
-  GPIO_WriteHigh(GPIOD, (GPIO_Pin_TypeDef)GPIO_PIN_4);                    // SDN Hight
-  Delay_ms(10);
-  GPIO_WriteLow(GPIOD, (GPIO_Pin_TypeDef)GPIO_PIN_4);                     // SDN Low
-  Delay_ms(100);
-
+  
   MYinit();               ////////////////////////////////////////////////////////////////////////////////////////////////////////init
 
   SI446X_FIFOINFO(0, 0, 1, 1);		// BUFFER CLEAR
@@ -250,11 +253,11 @@ void main(void)
             delay_synchro = 500;
           }
 #if SYNCHRO_MODE
-        }
+        
 
           if ((DataToSend == 0) && ((NeedAnswer>0) || (delay_synchro>0))){      //Maintain communication by sync pulses.
             
-            Delay_ms(delay_measure_tx_middle);                                  //So as not to foul the broadcast.
+            //Delay_ms(delay_measure_tx_middle);                                  //So as not to foul the broadcast.
             
             if (NeedAnswer) {wbuff[0] = NeedAnswer; NeedAnswer=0;}              // Pulse is Answer
             else if (delay_synchro>0) wbuff[0] = PACKET_ASK;                    // Pulse is Ask
