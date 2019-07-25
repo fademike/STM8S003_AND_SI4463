@@ -41,8 +41,9 @@
 /* Private variables ---------------------------------------------------------*/
   extern volatile int time_delay;
   extern char UartRxBuffer[UART_BUF_SIZE];
-  extern volatile int UartRxBuffer_rd;
-  extern volatile int UartRxBuffer_wr;
+  extern int UartRxBuffer_rd;
+  extern int UartRxBuffer_wr;
+  extern volatile int UartRxBuffer_timer;
   extern volatile int delay_to_wait_answer;
   extern volatile int delay_synchro;
   extern volatile int delay_measure_tx;
@@ -246,7 +247,7 @@ INTERRUPT_HANDLER(TIM1_UPD_OVF_TRG_BRK_IRQHandler, 11)
   if(delay_synchro>0) delay_synchro--;
   delay_measure_tx++;
   
-  
+  if (UartRxBuffer_timer<1000)UartRxBuffer_timer++;
   
   
   
@@ -377,13 +378,13 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   */
  INTERRUPT_HANDLER(UART1_RX_IRQHandler, 18)
  {
-   
        /* Read one byte from the receive data register */
     //RxBuffer1[0] = 
    UartRxBuffer[UartRxBuffer_wr] = UART1_ReceiveData8();
 
    if (++UartRxBuffer_wr>=UART_BUF_SIZE) UartRxBuffer_wr = 0;
    
+   UartRxBuffer_timer=0;
 
         /* Disable the UART1 Receive interrupt */
         //UART1_ITConfig(UART1_IT_RXNE_OR, DISABLE);

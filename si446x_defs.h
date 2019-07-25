@@ -15,7 +15,7 @@ typedef enum  {
 	STATE_RX				= 1,
 	STATE_TX				= 2,
 
-};
+} STATE_IDLE_TX_RX;
 
 
 typedef enum  {
@@ -56,7 +56,7 @@ typedef enum  {
 	GPIO_CCA_LATCH			= 37,
 	GPIO_HOPPED				= 38,
 	GPIO_HOP_TABLE_WRAP		= 39
-};
+} SI4463_GPIO_FUNC;
 
 
 

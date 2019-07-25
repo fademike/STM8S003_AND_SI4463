@@ -103,7 +103,7 @@ uint32_t RFwrite(unsigned char *data, uint8_t length)
 
 
 
-const unsigned char config_table[] = RADIO_CONFIGURATION_DATA_ARRAY;
+unsigned char config_table[] = RADIO_CONFIGURATION_DATA_ARRAY;
 
 
 void MYinit(void)

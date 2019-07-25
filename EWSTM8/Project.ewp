@@ -7345,9 +7345,6 @@
       <name>$PROJ_DIR$\..\main.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\RfTransceiver.c</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\Si4463.c</name>
     </file>
     <file>
