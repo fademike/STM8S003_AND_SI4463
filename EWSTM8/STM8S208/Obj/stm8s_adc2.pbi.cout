@@ -1,30 +1,18 @@
-"C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\src\stm8s_adc2.c"
+"C:\Users\NASA\Desktop\temp\git\Libraries\STM8S_StdPeriph_Driver\src\stm8s_adc2.c"
 -std=c99
 -ferror-limit=100
 -I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\..
+C:\Users\NASA\Desktop\temp\git\EWSTM8\..
 -I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\..\..\..\Libraries\STM8S_StdPeriph_Driver\inc
--I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\..\..\..\Utilities\STM8S_EVAL
--I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\..\..\..\Utilities\STM8S_EVAL\STM8S-128_EVAL
--I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\..\..\..\Utilities\STM8S_EVAL\Common
+C:\Users\NASA\Desktop\temp\git\EWSTM8\..\Libraries\STM8S_StdPeriph_Driver\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\inc\c
 -I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template
+C:\Users\NASA\Desktop\temp\git
 -I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc
--I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Utilities\STM8S_EVAL
--I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Utilities\STM8S_EVAL\STM8S-128_EVAL
--I
-C:\Program Files (x86)\IAR Systems\STM8S_StdPeriph_Lib\Utilities\STM8S_EVAL\Common
+C:\Users\NASA\Desktop\temp\git\Libraries\STM8S_StdPeriph_Driver\inc
 -DUSE_STM8_128_EVAL=1
 -DSTM8S208=1
 -D__CHAR_BITS__=8
