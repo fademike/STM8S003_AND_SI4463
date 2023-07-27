@@ -1,8 +1,8 @@
 /*
  * si446x_defs.h
  *
- *  Created on: 15 ���� 2016 �.
- *      Author: NASA
+ *  Created on: 15.04.2016.
+ *      Author: fademike
  */
 
 #ifndef INC_SI446X_DEFS_H_

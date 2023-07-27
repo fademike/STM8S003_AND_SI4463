@@ -1,8 +1,8 @@
 /*
  * Si4463.c
  *
- *  Created on: 16 ���� 2016 �.
- *      Author: NASA
+ *  Created on: 16.04.2016.
+ *      Author: fademike
  */
 
 
@@ -419,7 +419,7 @@ uint8_t getStatus(void)
 uint8_t changeState(uint8_t state)
 {
 	switch (state) {
-		case 1:
+		case STATE_RX:
 			SI446X_START_RX(0,0,0,0,3,3);//cmdStartRx(0, 0);
 			break;
 		case 2:
@@ -495,23 +495,6 @@ int RFinit(void)
 
     SI446X_PART_INFO(buffer);
 
-// #ifdef SI_POOR_PRINTF
-//     char str[256];
-//     Printf("Si data is :");
-//     Printf(itoa(buffer[0], str));
-//     Printf(", ");
-//     Printf(itoa(buffer[1], str));
-//     Printf(", ");
-//     Printf(itoa(buffer[2], str));
-//     Printf(", ");
-//     Printf(itoa(buffer[3], str));
-//     Printf(".\n\r");
-//     if ((buffer[2] == 0x44) && (buffer[3]== 0x63)) Printf("Dev is si4463\n\r");
-// else
-//     Printf("Si data is : 0x%x, 0x%x\n\r", buffer[2], buffer[3]);
-//     if ((buffer[2] == 0x44) && (buffer[3]== 0x63)) Printf("Dev is si4463\n\r");
-// #endif
-
     if ((buffer[3]!= 0x63)) return -1;
 
     unsigned char i;
@@ -528,6 +511,21 @@ int RFinit(void)
 
         j += i;
     }
+
+
+    //setFrequency(433.3*1000*1000);
+    setPower(0x20);//(0x08);	//(0x7F);
+    SI446X_FIFOINFO(0, 0, 1, 1);		// BUFFER CLEAR
+    changeState(STATE_RX);			// Set state to RX
+
+#if 0	// carrier mode
+        setCarrier(1);
+        char wbuff[64];
+        RFwrite(wbuff, PACKET_LEN);
+
+        while(1){RFwrite(wbuff, PACKET_LEN);};
+#endif
+
     return 0;
 }
 

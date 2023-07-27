@@ -7,10 +7,9 @@
 #define STM8   //LINUX // STM32
 #define SI4463//nRF24	//SI4463
 
-void my_msleep(int ms);
+void msleep(int ms);
 
-#define usleep(x) my_msleep(x/1000)
-#define msleep my_msleep
+#define usleep(x) msleep(x/1000)
 void Printf (char * str);
 char* itoa(int i, char b[]);
 unsigned long GetTime_ms(void);
