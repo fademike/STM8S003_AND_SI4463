@@ -1,0 +1,18 @@
+-muwx
+-i uartspi.ihx
+-Y
+-b HOME = 0x8000
+-b DATA = 0x0001
+-b SSEG = 0xffffffff
+-k /usr/bin/../share/sdcc/lib/stm8
+-k /usr/share/sdcc/lib/stm8
+-l stm8
+-l stm8
+interrupts.rel
+main.rel
+ModemControl.rel
+si4463.rel
+spi.rel
+uart.rel
+
+-e

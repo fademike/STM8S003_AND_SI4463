@@ -1,0 +1,284 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     FFFFFFFF  s_SSEG                          
+     00000000  .__.ABS.                           
+     00000000  l_CABS                          
+     00000000  l_DABS                          
+     00000000  l__CODE                         
+     00000000  s_CABS                          
+     00000000  s_DABS                          
+     00000000  s__CODE                         
+     00000001  l_SSEG                          
+     00000001  s_DATA                          
+     00000003  l_GSFINAL                       
+     00000025  l_GSINIT                        
+     00000028  l_INITIALIZED                   
+     00000028  l_INITIALIZER                   
+     0000006F  l_HOME                          
+     0000019B  l_CONST                         
+     0000029E  l_DATA                          
+     0000029F  s_INITIALIZED                   
+     000011DB  l_CODE                          
+     00008000  s_HOME                          
+     0000806F  s_GSINIT                        
+     00008094  s_GSFINAL                       
+     00008097  s_CONST                         
+     00008232  s_INITIALIZER                   
+     0000825A  s_CODE                          
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DATA                                00000001    0000029E =         670. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000001  _toSendCmdbuf                      ModemControl
+     00000141  _toSendCmd_RD                      ModemControl
+     00000143  _toSendCmd_WR                      ModemControl
+     00000145  _toRxCmdbuf                        ModemControl
+     00000285  _toRxCmd_RD                        ModemControl
+     00000287  _toRxCmd_WR                        ModemControl
+     00000289  _UartRxBuffer                      ModemControl
+     0000028C  _BufferTxRf                        ModemControl
+     00000295  _del                               spi
+     00000297  _UART_rx                           uart
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+INITIALIZED                         0000029F    00000028 =          40. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000029F  _uart_tx_array                     interrupts
+     000002A1  _uart_tx_ptr                       interrupts
+     000002A3  _uart_tx_len                       interrupts
+     000002A5  _Global_time                       main
+     000002A9  _paused_val                        main
+     000002AB  _pack_counter                      ModemControl
+     000002AE  _delay_to_wait_answer              ModemControl
+     000002B0  _delay_measure_tx                  ModemControl
+     000002B2  _delay_synchro                     ModemControl
+     000002B4  _delay_after_send_symbol           ModemControl
+     000002B6  _NeedAnswer                        ModemControl
+     000002B7  _UartRxBuffer_rd                   ModemControl
+     000002B9  _UartRxBuffer_wr                   ModemControl
+     000002BB  _BufferTxRf_len                    ModemControl
+     000002BD  _ptr_SendSymbol                    ModemControl
+     000002C5  _UART_rx_start_i                   uart
+     000002C6  _UART_rx_cur_i                     uart
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00008000    0000006F =         111. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              0000806F    00000025 =          37. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             00008094    00000003 =           3. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00008097    0000019B =         411. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000080BB  _config_table                      si4463
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+INITIALIZER                         00008232    00000028 =          40. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                0000825A    000011DB =        4571. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000825A  _TLI_IRQHandler                    interrupts
+     0000825B  _AWU_IRQHandler                    interrupts
+     0000825C  _CLK_IRQHandler                    interrupts
+     0000825D  _EXTI_PORTA_IRQHandler             interrupts
+     0000825E  _EXTI_PORTB_IRQHandler             interrupts
+     0000825F  _EXTI_PORTC_IRQHandler             interrupts
+     00008260  _EXTI_PORTD_IRQHandler             interrupts
+     00008261  _EXTI_PORTE_IRQHandler             interrupts
+     00008262  _SPI_IRQHandler                    interrupts
+     0000826E  _TIM1_UPD_OVF_TRG_BRK_IRQHandler   interrupts
+     0000826F  _TIM1_CAP_COM_IRQHandler           interrupts
+     00008270  _TIM2_UPD_OVF_BRK_IRQHandler       interrupts
+     00008271  _TIM2_CAP_COM_IRQHandler           interrupts
+     00008272  _UART1_TX_IRQHandler               interrupts
+     0000829C  _UART1_RX_IRQHandler               interrupts
+     000082AE  _I2C_IRQHandler                    interrupts
+     000082AF  _ADC1_IRQHandler                   interrupts
+     000082B0  _TIM4_UPD_OVF_IRQHandler           interrupts
+     000082D8  _EEPROM_EEC_IRQHandler             interrupts
+     000082D9  _my_msleep                         main
+     00008325  _GetTime_ms                        main
+     0000832D  _Printf                            main
+     00008343  _itoa                              main
+     000083D8  _test_set                          main
+     000083EB  _main                              main
+     0000846D  _DataArrayPP_ifnfull               ModemControl
+     00008480  _ModemControl_SendPacket           ModemControl
+     000084E6  _ModemControl_SendSymbol_Complet   ModemControl
+     0000850D  _ModemControl_SendSymbol           ModemControl
+     00008544  _ModemControl_GetPacket            ModemControl
+     00008583  _ModemControl_GetPacketPtr         ModemControl
+     000085D8  _ModemControl_GetByte              ModemControl
+     0000864D  _CRC_PacketCalculate               ModemControl
+     0000866F  _CRC_PacketCheck                   ModemControl
+     0000869E  _ModemControl_getStatus            ModemControl
+     000086A2  _ModemControl_init                 ModemControl
+     000086D7  _ModemControl_Read                 ModemControl
+     000087A4  _ModemControl_timeUpdate           ModemControl
+     00008832  _ModemControl_Send                 ModemControl
+     0000886E  _ModemControl_Work                 ModemControl
+     00008927  _SPI_TxRxData                      si4463
+     00008930  _SPI_Set_NSS                       si4463
+     00008946  _SI446X_WAIT_CTS                   si4463
+     0000896C  _SI446X_CMD                        si4463
+     00008990  _SI446X_READ_RESPONSE              si4463
+     000089DA  _SI446X_TX_FIFO_RESET              si4463
+     000089FC  _SI446X_RX_FIFO_RESET              si4463
+     00008A1E  _SI446X_WRITE_TX_FIFO              si4463
+     00008A64  _SI446X_SET_PROPERTY_1             si4463
+     00008A8D  _SI446X_GPIO_CONFIG                si4463
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CODE                                0000825A    000011DB =        4571. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00008ACD  _SI446X_READ_PACKET                si4463
+     00008B0A  _SI446X_START_TX                   si4463
+     00008B35  _SI446X_START_RX                   si4463
+     00008B6F  _SI446X_FIFOINFO                   si4463
+     00008BC2  _SI446X_INT_STATUS                 si4463
+     00008BE7  _SI446X_PART_INFO                  si4463
+     00008C01  _SI446X_POWER_UP                   si4463
+     00008C34  _cmdReadFRR                        si4463
+     00008C87  _getLevel                          si4463
+     00008C99  _getStatus                         si4463
+     00008CA9  _changeState                       si4463
+     00008CE7  _RFread                            si4463
+     00008D1C  _RFwrite                           si4463
+     00008D3C  _RFinit                            si4463
+     00008DC7  _setFrequency                      si4463
+     00008DC8  _setPower                          si4463
+     00008E02  _setCarrier                        si4463
+     00008E64  _spi_cs_init                       spi
+     00008E6E  _spi_cs                            spi
+     00008E81  _spi_ce_init                       spi
+     00008E8B  _spi_ce                            spi
+     00008E9E  _spi_txrx                          spi
+     00008EC9  _spi_init                          spi
+     00008EF2  _spi_send_buffer                   spi
+     00008F10  _spi_send_next                     spi
+     00008F44  _spi_send_byte                     spi
+     00008F5B  _spi_buf_sent                      spi
+     00008F65  _UART_send_byte                    uart
+     00008F71  _uart_write                        uart
+     00008F88  _UART_read_byte                    uart
+     00008FB1  _printUint                         uart
+     00009098  _print_long                        uart
+     0000912D  _readInt                           uart
+     000091FF  _error_msg                         uart
+     00009217  _U8toHEX                           uart
+     00009232  _printUHEX                         uart
+     00009259  _uart_init                         uart
+     0000926E  __modslong                         
+     00009293  __modulong                         
+     00009303  __divslong                         
+     0000932A  __divulong                         
+     00009384  __mullong                          
+     00009400  __modsint                          
+     00009416  __divsint                          
+     0000942A  __fast_long_neg                    
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                FFFFFFFF    00000001 =           1. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+
+Files Linked                              [ module(s) ]
+
+interrupts.rel                            [ interrupts ]
+main.rel                                  [ main ]
+ModemControl.rel                          [ ModemControl ]
+si4463.rel                                [ si4463 ]
+spi.rel                                   [ spi ]
+uart.rel                                  [ uart ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _modslong.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _modulong.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _divslong.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _divulong.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _mullong.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _modsint.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _divsint.rel ]
+/usr/bin/../share/sdcc/lib/stm8/stm8.lib  [ _fast_long_neg.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+
+User Base Address Definitions
+
+HOME = 0x8000
+DATA = 0x0001
+SSEG = 0xffffffff
+
+
