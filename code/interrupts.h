@@ -22,7 +22,7 @@
 #ifndef __INTERRUPTS_H__
 #define __INTERRUPTS_H__
 
-#include "stm8l.h"
+#include "stm8s.h"
 
 extern volatile unsigned char * uart_tx_array;
 extern volatile unsigned int uart_tx_ptr;

@@ -23,7 +23,7 @@
 #ifndef __PORTS_DEFINITION_H__
 #define __PORTS_DEFINITION_H__
 
-#include "stm8l.h"
+#include "stm8s.h"
 
 // macro for using in port constructions like PORT(LED_PORT, ODR) = xx
 #define CONCAT(a, b)	a ## _ ## b

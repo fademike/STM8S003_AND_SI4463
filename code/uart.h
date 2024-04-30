@@ -33,12 +33,8 @@ extern U8 UART_rx_cur_i;
 
 void UART_send_byte(U8 byte);
 void uart_write(char *str);
-void printUint(U8 *val, U8 len);
-void print_long(long Number);
-void error_msg(char *msg);
 void uart_init();
 U8 UART_read_byte(U8 *byte);
-void printUHEX(U8 val);
 
 #define check_UART_pointer(x)  do{if(x == UART_BUF_LEN) x = 0;}while(0)
 

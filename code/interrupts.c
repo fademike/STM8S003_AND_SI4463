@@ -115,24 +115,14 @@ INTERRUPT_HANDLER(TIM3_CAP_COM_IRQHandler, 16){}
     defined(STM8S003) ||  defined (STM8AF62Ax) || defined (STM8AF52Ax) || defined (STM8S903)
 // UART1 TX Interrupt
 INTERRUPT_HANDLER(UART1_TX_IRQHandler, 17){
-	// // if(UART1_SR & UART_SR_TXE){
-	// //  	UART1_CR2 |= UART_CR2_TEN;
-	// //  	UART1_DR = 'A';
-	// // }
-	// if (uart_tx_len>0){
-	// 	uart_tx_len--;
-	// }
-	// UART1_CR2 &= ~UART_CR2_TIEN;
-// 	volatile unsigned char * uart_tx_array = 0;
-// volatile unsigned int uart_tx_ptr = 0;
-// volatile unsigned int uart_tx_len = 0;
+
 	if (uart_tx_len>0){
 		uart_tx_len--;
-		UART1_DR = uart_tx_array[uart_tx_ptr++];
+		UART1_DR = uart_tx_array[uart_tx_ptr++];	// add next data
 	}
 	else {
 		uart_tx_ptr=0;
-		UART1_CR2 &= ~UART_CR2_TIEN;
+		UART1_CR2 &= ~UART_CR2_TIEN;	// dma completed
 	}
 }
 
@@ -156,18 +146,7 @@ INTERRUPT_HANDLER(UART2_TX_IRQHandler, 20){}
 
 // UART2 RX interrupt
 INTERRUPT_HANDLER(UART2_RX_IRQHandler, 21){
-	// U8 rb;
-	// if(UART2_SR & UART_SR_RXNE){ // data received
-	// 	rb = UART2_DR; // read received byte & clear RXNE flag
-	// 	while(!(UART2_SR & UART_SR_TXE));
-	// //	UART2_DR = rb; // echo received symbol
-	// 	UART_rx[UART_rx_cur_i++] = rb; // put received byte into cycled buffer
-	// 	if(UART_rx_cur_i == UART_rx_start_i){ // Oops: buffer overflow! Just forget old data
-	// 		UART_rx_start_i++;
-	// 		check_UART_pointer(UART_rx_start_i);
-	// 	}
-	// 	check_UART_pointer(UART_rx_cur_i);
-	// }
+
 }
 #endif // STM8S105 or STM8AF626x
 
